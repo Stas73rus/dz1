@@ -12,7 +12,8 @@ class QueryBuilder
 	private function __construct($db_name) 
 	{
 		$this->mysqli= @new mysqli(DB_HOST, DB_USER, DB_PASSWORD, $db_name) ;
-		if (mysqli_connect_errno()) { 
+		if (mysqli_connect_errno()) 
+		{ 
 			echo "Подключение невозможно: " . mysqli_connect_error() . "<br>";
 			self::$error = true;
 		} 
